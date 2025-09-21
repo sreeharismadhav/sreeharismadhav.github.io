@@ -6,59 +6,74 @@
   <title>Sreehari S | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 scroll-smooth">
+<body class="bg-gray-50 text-gray-900">
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-purple-600 to-blue-500 text-white h-screen flex flex-col justify-center items-center text-center">
-  <h1 class="text-5xl font-bold mb-4">Sreehari S</h1>
-  <p class="text-xl mb-6">Cyber Forensics | OSINT | Developer</p>
-  <a href="#contact" class="bg-white text-purple-600 font-bold px-6 py-3 rounded shadow hover:bg-gray-200 transition">Contact Me</a>
+<section class="relative bg-gradient-to-r from-indigo-600 to-purple-600 h-screen flex flex-col justify-center items-center text-center text-white">
+  <div class="max-w-2xl px-6">
+    <h1 class="text-6xl font-extrabold mb-4">Sreehari S</h1>
+    <p class="text-2xl mb-6">Cyber Forensics | OSINT | Developer</p>
+    <a href="#contact" class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition">Contact Me</a>
+  </div>
 </section>
 
-<!-- Navigation -->
-<nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
-  <div class="container mx-auto flex justify-center space-x-6 py-4">
-    <a href="#about" class="hover:text-purple-600 transition">About</a>
-    <a href="#education" class="hover:text-purple-600 transition">Education</a>
-    <a href="#projects" class="hover:text-purple-600 transition">Projects</a>
-    <a href="#skills" class="hover:text-purple-600 transition">Skills</a>
-    <a href="#experience" class="hover:text-purple-600 transition">Experience</a>
-    <a href="#resume" class="hover:text-purple-600 transition">Resume</a>
-    <a href="#contact" class="hover:text-purple-600 transition">Contact</a>
+<!-- Sticky Navigation -->
+<nav class="sticky top-0 bg-white shadow z-50">
+  <div class="max-w-6xl mx-auto flex justify-center space-x-8 py-4">
+    <a href="#about" class="hover:text-indigo-600 transition">About</a>
+    <a href="#education" class="hover:text-indigo-600 transition">Education</a>
+    <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+    <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+    <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
+    <a href="#resume" class="hover:text-indigo-600 transition">Resume</a>
+    <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
   </div>
 </nav>
 
-<div class="container mx-auto px-4 py-20 space-y-20">
+<div class="max-w-6xl mx-auto px-6 py-16 space-y-24">
 
   <!-- About Me -->
   <section id="about" class="text-center">
-    <h2 class="text-3xl font-bold mb-4 text-purple-600">About Me</h2>
-    <p>I am a postgraduate in Cyber Forensics with hands-on experience in building forensic tools, metadata analysis, and digital investigation workflows. Skilled in Python, SleuthKit, OSINT, and Google Dorking, I combine academic expertise with practical IT & forensic experience.</p>
+    <h2 class="text-4xl font-bold mb-6 text-indigo-600">About Me</h2>
+    <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+      I am a postgraduate in Cyber Forensics with hands-on experience in building forensic tools, metadata analysis, and digital investigation workflows. Skilled in Python, SleuthKit, OSINT, and Google Dorking, I combine academic expertise with practical IT & forensic experience.
+    </p>
   </section>
 
   <!-- Education -->
-  <section id="education" class="text-center">
-    <h2 class="text-3xl font-bold mb-4 text-purple-600">Education</h2>
-    <ul class="list-disc list-inside space-y-2">
-      <li><strong>M.Sc. Cyber Forensics</strong> – STAS, Kottayam (2023–2025)<br>PG Main Project: Inspector Forensic Toolkit (base version)</li>
-      <li><strong>B.Sc.</strong> – Projects: Blogging Web App, Bookstall Management System</li>
-      <li><strong>SSLC & Higher Secondary</strong> – KPMVHSS Poothotta</li>
-    </ul>
+  <section id="education">
+    <h2 class="text-4xl font-bold mb-8 text-indigo-600 text-center">Education</h2>
+    <div class="space-y-6">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">M.Sc. Cyber Forensics</h3>
+        <p>2023–2025 | School of Technology & Applied Science, Kottayam</p>
+        <p>Project: Inspector Forensic Toolkit (base version)</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">B.Sc. Computer Science</h3>
+        <p>2020–2023 | IHRD College of Applied Science, Kaduthuruthy</p>
+        <p>Projects: Blogging Web App, Bookstall Management System</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">SSLC & Higher Secondary</h3>
+        <p>KPMVHSS Poothotta</p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="text-center">
-    <h2 class="text-3xl font-bold mb-4 text-purple-600">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+  <section id="projects">
+    <h2 class="text-4xl font-bold mb-8 text-indigo-600 text-center">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
         <h3 class="text-xl font-bold mb-2">Inspector Forensic Toolkit (base version)</h3>
         <p>GUI-based forensic suite with disk imaging, data recovery, password recovery, and metadata analysis modules.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
         <h3 class="text-xl font-bold mb-2">Steganography Android Tool</h3>
         <p>Embed and extract files securely within other files for covert transfer.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-2">
         <h3 class="text-xl font-bold mb-2">Mini UPS for WiFi Router</h3>
         <p>12V UPS system providing 6+ hours backup with automatic failover and charge indicators.</p>
       </div>
@@ -67,41 +82,53 @@
 
   <!-- Skills -->
   <section id="skills" class="text-center">
-    <h2 class="text-3xl font-bold mb-4 text-purple-600">Skills</h2>
+    <h2 class="text-4xl font-bold mb-6 text-indigo-600">Skills</h2>
     <div class="flex flex-wrap justify-center gap-3">
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">Python</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">JavaScript</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">SQL</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">SleuthKit</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">Autopsy</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">Wireshark</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">Kali Linux</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">OSINT</span>
-      <span class="bg-purple-600 text-white px-3 py-1 rounded">Google Dorking</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">Python</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">JavaScript</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">SQL</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">SleuthKit</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">Autopsy</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">Wireshark</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">Kali Linux</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">OSINT</span>
+      <span class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition">Google Dorking</span>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="text-center">
-    <h2 class="text-3xl font-bold mb-4 text-purple-600">Experience</h2>
-    <ul class="list-disc list-inside space-y-2">
-      <li><strong>Kerala Police Internship</strong> – Kochi City Cyber Crime Police Station (Aug 18 – Sep 11, 2025)</li>
-      <li><strong>Hardware & Software Technician</strong> – CAP Services, Udayamperoor (Apr 2023 – Present)</li>
-      <li><strong>IT Support Technician</strong> – Kerala Civil Supplies Corporation HQ (May – Sep 2023)</li>
-      <li><strong>Part-time Teacher</strong> – Bright Academy, Kaduthuruthy (Sep 2024 – Aug 2025)</li>
-    </ul>
+  <section id="experience">
+    <h2 class="text-4xl font-bold mb-8 text-indigo-600 text-center">Experience</h2>
+    <div class="space-y-6">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl">Kerala Police Internship</h3>
+        <p>Kochi City Cyber Crime Police Station | Aug 18 – Sep 11, 2025</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl">Hardware & Software Technician</h3>
+        <p>CAP Services, Udayamperoor | Apr 2023 – Present</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl">IT Support Technician</h3>
+        <p>Kerala Civil Supplies Corporation HQ | May – Sep 2023</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl">Part-time Teacher</h3>
+        <p>Bright Academy, Kaduthuruthy | Sep 2024 – Aug 2025</p>
+      </div>
+    </div>
   </section>
 
   <!-- Resume -->
   <section id="resume" class="text-center">
-    <h2 class="text-3xl font-bold mb-4 text-purple-600">Resume</h2>
-    <a href="resume.pdf" class="bg-purple-600 text-white px-6 py-3 rounded shadow hover:bg-purple-500 transition" download>Download My CV</a>
+    <h2 class="text-4xl font-bold mb-6 text-indigo-600">Resume</h2>
+    <a href="resume.pdf" class="bg-indigo-600 text-white px-8 py-3 rounded-full shadow hover:bg-indigo-500 transition" download>Download My CV</a>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="text-center">
-    <h2 class="text-3xl font-bold mb-4 text-purple-600">Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com" class="text-purple-600 font-bold">youremail@example.com</a></p>
+    <h2 class="text-4xl font-bold mb-4 text-indigo-600">Contact</h2>
+    <p class="text-lg">Email: <a href="mailto:sreeharismadhav@gmail.com" class="text-indigo-600 font-semibold">sreeharismadhav@gmail.com</a></p>
   </section>
 
 </div>
