@@ -6,184 +6,195 @@
 <title>Sreehari S | Portfolio</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  // Set dark mode by default, allow system preference
-  if (!localStorage.getItem('theme')) {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  } else if(localStorage.getItem('theme') === 'dark') {
-    document.documentElement.classList.add('dark')
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
   }
 </script>
+<style>
+  .card { transition: transform 0.3s, box-shadow 0.3s; }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.3); }
+</style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scroll-smooth transition-colors duration-500">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 scroll-smooth">
 
+<!-- Hero Section -->
 <section class="bg-gradient-to-r from-purple-600 to-blue-500 text-white h-screen flex flex-col justify-center items-center text-center">
-  <h1 class="text-6xl font-extrabold mb-4 drop-shadow-lg">Sreehari S</h1>
-  <p class="text-2xl mb-6">Cyber Forensics | OSINT | Developer</p>
-  <a href="#contact" class="bg-white text-purple-600 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition">Contact Me</a>
+  <h1 class="text-5xl font-bold mb-4">Sreehari S</h1>
+  <p class="text-xl mb-6">Cyber Forensics | OSINT | Developer</p>
+  <a href="#contact" class="bg-white text-purple-600 font-bold px-6 py-3 rounded shadow hover:bg-gray-200 transition">Contact Me</a>
 </section>
 
+<!-- Navigation -->
 <nav class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow z-50">
-  <div class="container mx-auto flex justify-center space-x-8 py-4">
-    <a href="#about" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">About</a>
-    <a href="#education" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Education</a>
-    <a href="#projects" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Projects</a>
-    <a href="#skills" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Skills</a>
-    <a href="#experience" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Experience</a>
-    <a href="#activities" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Activities</a>
-    <a href="#contact" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Contact</a>
+  <div class="container mx-auto flex justify-center space-x-6 py-4">
+    <a href="#about" class="hover:text-purple-600 dark:hover:text-purple-400 transition">About</a>
+    <a href="#education" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Education</a>
+    <a href="#projects" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Projects</a>
+    <a href="#skills" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Skills</a>
+    <a href="#experience" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Experience</a>
+    <a href="#activities" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Activities</a>
+    <a href="#awards" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Awards</a>
+    <a href="#contact" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Contact</a>
   </div>
 </nav>
 
-<div class="container mx-auto px-6 py-24 space-y-28">
+<div class="container mx-auto px-4 py-20 space-y-20">
 
-<section id="about" class="text-center">
-  <h2 class="text-4xl font-bold mb-6 text-purple-600">About Me</h2>
-  <p class="max-w-3xl mx-auto text-lg">I am a postgraduate in Cyber Forensics with hands-on experience in forensic tools, metadata analysis, and digital investigation workflows. Skilled in Python, SleuthKit, OSINT, and Google Dorking, I combine academic expertise with practical IT & forensic experience.</p>
-</section>
+  <!-- About Me -->
+  <section id="about" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">About Me</h2>
+    <p>I am a postgraduate in Cyber Forensics with hands-on experience in forensic tools, metadata analysis, OSINT investigations, and digital workflows. Skilled in Python, PHP, JavaScript, SQL, GDScript, SleuthKit, Autopsy, Wireshark, Kali Linux, and Google Dorking, I combine academic expertise with practical IT & forensic experience.</p>
+  </section>
 
-<section id="education" class="text-center">
-  <h2 class="text-4xl font-bold mb-8 text-purple-600">Education</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-2">M.Sc. Cyber Forensics</h3>
-      <p>School of Technology & Applied Science, Kottayam | 2023–2025</p>
-      <p class="mt-2 italic">Project: Inspector Forensic Toolkit</p>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-2">B.Sc. Computer Science</h3>
-      <p>IHRD College of Applied Science, Kaduthuruthy | 2020–2023</p>
-      <p class="mt-2 italic">Projects: Blogging Web App, Bookstall Management System</p>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-2">Higher Secondary (Computer Science)</h3>
-      <p>KPMVHSS, Poothotta | 2018–2020</p>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-2">SSLC</h3>
-      <p>KPMVHSS, Poothotta | 2017–2018</p>
-    </div>
-  </div>
-</section>
+  <!-- Education -->
+  <section id="education" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">Education</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li><strong>M.Sc. Cyber Forensics</strong> – School of Technology & Applied Science, Kottayam (2023–2025)</li>
+      <li><strong>B.Sc. Computer Science</strong> – IHRD College of Applied Science, Kaduthuruthy (2020–2023)</li>
+      <li><strong>Higher Secondary (Computer Science)</strong> – KPMVHSS Poothotta (2018–2020)</li>
+      <li><strong>SSLC</strong> – KPMVHSS Poothotta (2017–2018)</li>
+    </ul>
+  </section>
 
-<section id="projects" class="text-center">
-  <h2 class="text-4xl font-bold mb-8 text-purple-600">Projects</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Inspector Forensic Toolkit</h3>
-      <p>GUI-based forensic suite with disk imaging, data recovery, password recovery, and metadata analysis modules.</p>
+  <!-- Projects -->
+  <section id="projects" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Inspector Forensic Toolkit</h3>
+        <p>Modular forensic suite with disk imaging, data recovery, password recovery, and metadata inspection.</p>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Stegan Tool</h3>
+        <p>Embed and extract files securely inside media files.</p>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Blogging Web Application</h3>
+        <p>Django-based multi-user blog with authentication and content management.</p>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Bookstall Management System</h3>
+        <p>Inventory, billing, and user management system built with PHP, JavaScript, HTML & CSS.</p>
+      </div>
     </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Stegan Tool</h3>
-      <p>Embed and extract files securely inside media files for covert transfer.</p>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Blogging Web Application</h3>
-      <p>Django-based multi-user blog with authentication and content management system.</p>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Bookstall Management System</h3>
-      <p>Inventory and billing system for bookstores developed with PHP, JavaScript, HTML, and CSS.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills" class="text-center">
-  <h2 class="text-4xl font-bold mb-6 text-purple-600">Skills</h2>
-  <div class="flex flex-wrap justify-center gap-3">
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">Python</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">JavaScript</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">PHP</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">SQL</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">GDScript</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">Django</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">Tkinter</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">HTML</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">CSS</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">SleuthKit</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">Autopsy</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">Wireshark</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">Kali Linux</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">OSINT</span>
-    <span class="bg-purple-600 text-white px-3 py-1 rounded-full">Google Dorking</span>
-  </div>
-</section>
+  <!-- Skills -->
+  <section id="skills" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">Skills</h2>
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Python</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">PHP</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">JavaScript</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">SQL</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">GDScript</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">HTML</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">CSS</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Django</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Tkinter</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">pytsk</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">LaTeX</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">SleuthKit</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Autopsy</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Wireshark</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Kali Linux</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Nmap</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">John the Ripper</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">MSF</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Hydra</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Burp Suite</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">OSINT</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Google Dorking</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Leadership</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Teamwork</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Communication</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Problem Solving</span>
+      <span class="bg-purple-600 text-white px-3 py-1 rounded">Fast Learning</span>
+    </div>
+  </section>
 
-<section id="experience" class="text-center">
-  <h2 class="text-4xl font-bold mb-8 text-purple-600">Experience</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Kerala Police Internship</h3>
-      <p>Cyber Crime Division | Aug 18 – Sep 11, 2025</p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Assisted in digital investigations and metadata analysis</li>
-        <li>Supported officers in ongoing cybercrime cases</li>
-        <li>Applied OSINT and case documentation techniques</li>
-      </ul>
+  <!-- Experience -->
+  <section id="experience" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">Experience</h2>
+    <div class="space-y-4">
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Kerala Police Internship – Cyber Crime Division</h3>
+        <p>Aug 18 – Sep 11, 2025</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Assisted in cybercrime investigations and forensic evidence analysis</li>
+          <li>Performed metadata extraction, OSINT investigations, and case documentation</li>
+          <li>Supported officers in ongoing cases, gaining hands-on practical knowledge</li>
+        </ul>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">IT Support Technician – Kerala Civil Supplies Corporation HQ</h3>
+        <p>May 30 – Sep 30, 2023</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Delivered statewide technical support across departments</li>
+          <li>Performed system setup, hardware/software troubleshooting, and maintenance</li>
+          <li>Supported IT operations and infrastructure readiness</li>
+        </ul>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Hardware & Software Technician (Part-time) – CAP Services</h3>
+        <p>Apr 30, 2023 – Present</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Diagnosed and repaired client systems</li>
+          <li>Assembled PCs and configured software environments</li>
+          <li>Provided ongoing client support for IT infrastructure</li>
+        </ul>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Part-time Teacher – Bright Academy</h3>
+        <p>Sep 5, 2024 – Aug 2025</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Taught Computer Science, English, and IT fundamentals</li>
+          <li>Mentored students, guided academic assignments, and encouraged digital literacy</li>
+        </ul>
+      </div>
     </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">IT Support Technician</h3>
-      <p>Kerala Civil Supplies Corporation HQ | May – Sep 2023</p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Statewide technical support and troubleshooting</li>
-        <li>Installed and maintained hardware/software</li>
-        <li>Managed smooth IT operations across departments</li>
-      </ul>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Hardware & Software Technician</h3>
-      <p>CAP Services | Apr 2023 – Present</p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Diagnosed and repaired client systems</li>
-        <li>PC assembly and software configuration</li>
-        <li>Ongoing support for client IT systems</li>
-      </ul>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Part-time Teacher</h3>
-      <p>Bright Academy | Sep 2024 – Aug 2025</p>
-      <ul class="list-disc list-inside mt-2">
-        <li>Taught Computer Science and English</li>
-        <li>Guided academic assignments and projects</li>
-        <li>Mentored students with digital literacy skills</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="activities" class="text-center">
-  <h2 class="text-4xl font-bold mb-8 text-purple-600">Activities & Awards</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Leadership & Volunteering</h3>
-      <ul class="list-disc list-inside mt-2">
-        <li>NSS Volunteer Secretary (PG) & Volunteer (UG)</li>
-        <li>University Union Councillor</li>
-        <li>Student Lead – IHRD Tharang 2023</li>
-        <li>House Captain (UG & PG)</li>
-      </ul>
-    </div>
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Awards & Achievements</h3>
-      <ul class="list-disc list-inside mt-2">
-        <li>A Grade – Essay Writing (Sanskrit), MG University Youth Festival 2025</li>
-        <li>Project Delegate – IHRD Tharang 2023</li>
-        <li>Recognized for excellence in student leadership and project initiatives</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  <!-- Activities -->
+  <section id="activities" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">Activities</h2>
+    <ul class="list-disc list-inside space-y-2 text-left max-w-3xl mx-auto">
+      <li>Kerala Police Internship – Assisted in cybercrime investigations and metadata analysis</li>
+      <li>IT Support Technician Role – Statewide IT maintenance & troubleshooting</li>
+      <li>Hardware & Software Technician – Hands-on client system repair and assembly</li>
+      <li>NSS Volunteer Secretary (PG) – Organized campaigns and university events</li>
+      <li>NSS Volunteer (UG) – Participated in community service programs</li>
+      <li>Student Union Councillor – Represented student body, facilitated campus initiatives</li>
+      <li>Student Lead – IHRD Tharang 2023 (Managed projects & team coordination)</li>
+      <li>House Captain (UG & PG) – Led teams, organized competitions</li>
+      <li>Arts, essay writing, cultural participation – Encouraged creativity</li>
+      <li>Sports – Football & Chess</li>
+    </ul>
+  </section>
 
-<section id="contact" class="text-center">
-  <h2 class="text-4xl font-bold mb-6 text-purple-600">Contact</h2>
-  <p class="text-lg">📧 <a href="mailto:sreeharismadhav@gmail.com" class="text-purple-600 font-bold">sreeharismadhav@gmail.com</a></p>
-  <p class="text-lg">📞 +91 8089229735</p>
-</section>
+  <!-- Awards & Achievements -->
+  <section id="awards" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">Awards & Achievements</h2>
+    <ul class="list-disc list-inside space-y-2 text-left max-w-3xl mx-auto">
+      <li>Kerala Police Internship – Recognized for contribution to case support and investigation</li>
+      <li>IT Support Technician – Appreciation for statewide technical assistance</li>
+      <li>Hardware & Software Technician – Acknowledged for exceptional client support and troubleshooting</li>
+      <li>A Grade – Essay Writing (Sanskrit), MG University Youth Festival 2025</li>
+      <li>Student Project Delegate – IHRD Tharang 2023</li>
+    </ul>
+  </section>
 
-<footer class="bg-gray-800 text-white text-center py-6 mt-20">
+  <!-- Contact -->
+  <section id="contact" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-600">Contact</h2>
+    <p>Email: <a href="mailto:sreeharismadhav@gmail.com" class="text-purple-600 font-bold">sreeharismadhav@gmail.com</a></p>
+    <p>Phone: +91 8089229735</p>
+  </section>
+
+</div>
+
+<footer class="bg-gray-800 dark:bg-gray-700 text-white text-center py-6">
   &copy; 2025 Sreehari S
 </footer>
 
