@@ -5,8 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sreehari S | Portfolio</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Set dark mode by default, allow system preference
+  if (!localStorage.getItem('theme')) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  } else if(localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark')
+  }
+</script>
 </head>
-<body class="bg-gray-50 text-gray-800 scroll-smooth">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scroll-smooth transition-colors duration-500">
 
 <section class="bg-gradient-to-r from-purple-600 to-blue-500 text-white h-screen flex flex-col justify-center items-center text-center">
   <h1 class="text-6xl font-extrabold mb-4 drop-shadow-lg">Sreehari S</h1>
@@ -14,14 +26,15 @@
   <a href="#contact" class="bg-white text-purple-600 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition">Contact Me</a>
 </section>
 
-<nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+<nav class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow z-50">
   <div class="container mx-auto flex justify-center space-x-8 py-4">
-    <a href="#about" class="hover:text-purple-600 transition font-semibold">About</a>
-    <a href="#education" class="hover:text-purple-600 transition font-semibold">Education</a>
-    <a href="#projects" class="hover:text-purple-600 transition font-semibold">Projects</a>
-    <a href="#skills" class="hover:text-purple-600 transition font-semibold">Skills</a>
-    <a href="#experience" class="hover:text-purple-600 transition font-semibold">Experience</a>
-    <a href="#contact" class="hover:text-purple-600 transition font-semibold">Contact</a>
+    <a href="#about" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">About</a>
+    <a href="#education" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Education</a>
+    <a href="#projects" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Projects</a>
+    <a href="#skills" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Skills</a>
+    <a href="#experience" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Experience</a>
+    <a href="#activities" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Activities</a>
+    <a href="#contact" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-semibold">Contact</a>
   </div>
 </nav>
 
@@ -35,21 +48,21 @@
 <section id="education" class="text-center">
   <h2 class="text-4xl font-bold mb-8 text-purple-600">Education</h2>
   <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-2xl font-bold mb-2">M.Sc. Cyber Forensics</h3>
       <p>School of Technology & Applied Science, Kottayam | 2023–2025</p>
       <p class="mt-2 italic">Project: Inspector Forensic Toolkit</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-2xl font-bold mb-2">B.Sc. Computer Science</h3>
       <p>IHRD College of Applied Science, Kaduthuruthy | 2020–2023</p>
       <p class="mt-2 italic">Projects: Blogging Web App, Bookstall Management System</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-2xl font-bold mb-2">Higher Secondary (Computer Science)</h3>
       <p>KPMVHSS, Poothotta | 2018–2020</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-2xl font-bold mb-2">SSLC</h3>
       <p>KPMVHSS, Poothotta | 2017–2018</p>
     </div>
@@ -59,19 +72,19 @@
 <section id="projects" class="text-center">
   <h2 class="text-4xl font-bold mb-8 text-purple-600">Projects</h2>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">Inspector Forensic Toolkit</h3>
       <p>GUI-based forensic suite with disk imaging, data recovery, password recovery, and metadata analysis modules.</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">Stegan Tool</h3>
       <p>Embed and extract files securely inside media files for covert transfer.</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">Blogging Web Application</h3>
       <p>Django-based multi-user blog with authentication and content management system.</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">Bookstall Management System</h3>
       <p>Inventory and billing system for bookstores developed with PHP, JavaScript, HTML, and CSS.</p>
     </div>
@@ -102,7 +115,7 @@
 <section id="experience" class="text-center">
   <h2 class="text-4xl font-bold mb-8 text-purple-600">Experience</h2>
   <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">Kerala Police Internship</h3>
       <p>Cyber Crime Division | Aug 18 – Sep 11, 2025</p>
       <ul class="list-disc list-inside mt-2">
@@ -111,7 +124,7 @@
         <li>Applied OSINT and case documentation techniques</li>
       </ul>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">IT Support Technician</h3>
       <p>Kerala Civil Supplies Corporation HQ | May – Sep 2023</p>
       <ul class="list-disc list-inside mt-2">
@@ -120,7 +133,7 @@
         <li>Managed smooth IT operations across departments</li>
       </ul>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">Hardware & Software Technician</h3>
       <p>CAP Services | Apr 2023 – Present</p>
       <ul class="list-disc list-inside mt-2">
@@ -129,13 +142,36 @@
         <li>Ongoing support for client IT systems</li>
       </ul>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
       <h3 class="text-xl font-bold mb-2">Part-time Teacher</h3>
       <p>Bright Academy | Sep 2024 – Aug 2025</p>
       <ul class="list-disc list-inside mt-2">
         <li>Taught Computer Science and English</li>
         <li>Guided academic assignments and projects</li>
         <li>Mentored students with digital literacy skills</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="activities" class="text-center">
+  <h2 class="text-4xl font-bold mb-8 text-purple-600">Activities & Awards</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+      <h3 class="text-xl font-bold mb-2">Leadership & Volunteering</h3>
+      <ul class="list-disc list-inside mt-2">
+        <li>NSS Volunteer Secretary (PG) & Volunteer (UG)</li>
+        <li>University Union Councillor</li>
+        <li>Student Lead – IHRD Tharang 2023</li>
+        <li>House Captain (UG & PG)</li>
+      </ul>
+    </div>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+      <h3 class="text-xl font-bold mb-2">Awards & Achievements</h3>
+      <ul class="list-disc list-inside mt-2">
+        <li>A Grade – Essay Writing (Sanskrit), MG University Youth Festival 2025</li>
+        <li>Project Delegate – IHRD Tharang 2023</li>
+        <li>Recognized for excellence in student leadership and project initiatives</li>
       </ul>
     </div>
   </div>
