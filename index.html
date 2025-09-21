@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sreehari S | Portfolio</title>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sreehari S | Portfolio</title>
+<style>
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  /* Reset & base */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Roboto', sans-serif; line-height:1.6; color:#333; background:#f9f9f9; }
+  a { text-decoration:none; color:#0077cc; }
+  h1,h2,h3 { color:#222; }
+
+  /* Container */
+  .container { width:90%; max-width:1000px; margin:auto; padding:20px; }
+
+  /* Header */
+  header { background:linear-gradient(135deg, #4a90e2, #9013fe); color:white; padding:60px 0; text-align:center; }
+  header h1 { font-size:3rem; margin-bottom:10px; }
+  header p { font-size:1.2rem; }
+
+  /* Section styling */
+  section { padding:50px 0; }
+  section h2 { text-align:center; margin-bottom:30px; font-size:2rem; color:#4a90e2; }
+  section p, section li { font-size:1rem; margin-bottom:10px; }
+  ul { list-style:circle inside; }
+
+  /* Card-style projects */
+  .project-card { background:white; padding:20px; margin:20px 0; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+  
+  /* Skills */
+  .skills span { display:inline-block; margin:5px 10px; padding:5px 10px; background:#4a90e2; color:white; border-radius:5px; font-size:0.9rem; }
+
+  /* Resume button */
+  .btn { display:inline-block; padding:10px 20px; margin-top:10px; background:#9013fe; color:white; border-radius:5px; transition:0.3s; }
+  .btn:hover { background:#4a90e2; }
+
+  /* Contact */
+  footer { text-align:center; padding:20px 0; background:#222; color:white; }
+
+</style>
 </head>
 <body>
-  <h1>Hello, I’m Sreehari 👋</h1>
-  <p>This is my portfolio website hosted on GitHub Pages.</p>
+
+<header>
+  <h1>Sreehari S</h1>
+  <p>Cyber Forensics | OSINT | Developer</p>
+</header>
+
+<div class="container">
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a postgraduate in Cyber Forensics with hands-on experience in building forensic tools, metadata analysis, and digital investigation workflows. Skilled in Python, SleuthKit, OSINT, and Google Dorking, I combine academic expertise with practical IT & forensic experience.</p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>M.Sc. Cyber Forensics</strong> – STAS, Kottayam (2023–2025) <br>PG Main Project: Inspector Forensic Toolkit (base version)</li>
+      <li><strong>B.Sc.</strong> – Projects: Blogging Web App, Bookstall Management System</li>
+      <li><strong>SSLC & Higher Secondary</strong> – KPMVHSS Poothotta</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Inspector Forensic Toolkit (base version)</h3>
+      <p>GUI-based forensic suite with disk imaging, data recovery, password recovery, and metadata analysis modules.</p>
+    </div>
+    <div class="project-card">
+      <h3>Steganography Android Tool</h3>
+      <p>Embed and extract files securely within other files for covert transfer.</p>
+    </div>
+    <div class="project-card">
+      <h3>Mini UPS for WiFi Router</h3>
+      <p>12V UPS system providing 6+ hours backup with automatic failover and charge indicators.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>SQL</span>
+      <span>SleuthKit</span>
+      <span>Autopsy</span>
+      <span>Wireshark</span>
+      <span>Kali Linux</span>
+      <span>Google Dorking</span>
+      <span>OSINT</span>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Kerala Police Internship</strong> – Kochi City Cyber Crime Police Station (Aug 18 – Sep 11, 2025)</li>
+      <li><strong>Hardware & Software Technician</strong> – CAP Services, Udayamperoor (Apr 2023 – Present)</li>
+      <li><strong>IT Support Technician</strong> – Kerala Civil Supplies Corporation HQ (May – Sep 2023)</li>
+      <li><strong>Part-time Teacher</strong> – Bright Academy, Kaduthuruthy (Sep 2024 – Aug 2025)</li>
+    </ul>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <a class="btn" href="resume.pdf" download>Download My CV</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Sreehari S</p>
+</footer>
+
 </body>
 </html>
